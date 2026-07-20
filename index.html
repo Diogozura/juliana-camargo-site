@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO básico ===== -->
+<title>Juliana Camargo | Personal Trainer para Mulheres em Cotia-SP</title>
+<meta name="description" content="Personal trainer para mulheres em Cotia-SP. Treinos personalizados e acompanhamento presencial em Cotia, Granja Viana e região. Agende sua avaliação gratuita.">
+<meta name="keywords" content="personal trainer Cotia, personal trainer feminino Cotia, personal trainer mulher, treino personalizado Cotia, personal trainer Granja Viana, academia Cotia, personal trainer zona oeste SP">
+<meta name="author" content="Juliana Camargo">
+<link rel="canonical" href="https://www.julianacamargopersonal.com.br/">
+
+<!-- ===== GEO (SEO local) ===== -->
+<meta name="geo.region" content="BR-SP">
+<meta name="geo.placename" content="Cotia">
+<meta name="geo.position" content="-23.6039;-46.9187">
+<meta name="ICBM" content="-23.6039, -46.9187">
+
+<!-- ===== Open Graph / redes sociais ===== -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Juliana Camargo | Personal Trainer para Mulheres em Cotia-SP">
+<meta property="og:description" content="Treinos personalizados e acompanhamento presencial em Cotia e região. Agende sua avaliação gratuita.">
+<meta property="og:url" content="https://www.julianacamargopersonal.com.br/">
+<meta property="og:image" content="https://www.julianacamargopersonal.com.br/assets/social-01.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ===== Favicons ===== -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- ===== Dados estruturados (SEO local / GEO) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "additionalType": "https://schema.org/HealthClub",
+  "name": "Juliana Camargo Personal Trainer",
+  "image": "https://www.julianacamargopersonal.com.br/assets/logo_icone_transparente.png",
+  "description": "Personal trainer especializada em treinos personalizados para mulheres, com atendimento presencial em Cotia-SP e região.",
+  "url": "https://www.julianacamargopersonal.com.br/",
+  "telephone": "+55-11-90000-0000",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cotia",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -23.6039,
+    "longitude": -46.9187
+  },
+  "areaServed": ["Cotia", "Granja Viana", "Vargem Grande Paulista", "Itapevi", "Zona Oeste de São Paulo"],
+  "sameAs": ["https://www.instagram.com/personaljulianacamargo"]
+}
+</script>
+
+<style>
+  :root{
+    --azul: #1B3A6B;
+    --azul-vivo: #3E6FD9;
+    --rosa: #E8437A;
+    --rosa-suave: #FDE3EC;
+    --tinta: #10131C;
+    --papel: #FAF9FC;
+    --linha: rgba(16,19,28,0.1);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--papel);
+    color: var(--tinta);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 24px;}
+  h1,h2,h3{font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.01em; line-height:1.05;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:500;}
+  :focus-visible{outline:3px solid var(--azul-vivo); outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background: rgba(250,249,252,0.9); backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--linha);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1100px; margin:0 auto;}
+  .nav-brand{display:flex; align-items:center; gap:10px; font-family:'Space Grotesk'; font-weight:700; font-size:18px;}
+  .nav-brand img{width:32px; height:32px;}
+  .nav-links{display:flex; gap:28px; font-size:14px; font-weight:500;}
+  .nav-links a{text-decoration:none; opacity:.75;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background: var(--tinta); color:white; padding:10px 20px; border-radius:30px;
+    font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;
+  }
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  /* HERO */
+  .hero{
+    position:relative; overflow:hidden; background: var(--tinta); color:white;
+    padding: 84px 0 70px;
+  }
+  .hero-bg{position:absolute; inset:0; z-index:0;}
+  .hero .wrap{position:relative; z-index:2;}
+  .hero-grid{display:grid; grid-template-columns: 1.1fr 0.9fr; gap:48px; align-items:center;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero .eyebrow{color:#9db4ff; margin-bottom:20px;}
+  .hero h1{font-size: clamp(36px, 5vw, 58px); margin-bottom:20px;}
+  .hero h1 .accent{
+    background: linear-gradient(100deg, var(--azul-vivo) 10%, var(--rosa) 90%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero p.lead{font-size:19px; color:#c9cbd8; max-width:520px; margin-bottom:32px; line-height:1.6;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:15px 26px; border-radius:32px;
+    font-weight:600; font-size:15px; text-decoration:none; border:none; cursor:pointer; font-family:'Inter';
+  }
+  .btn-primary{background: var(--rosa); color:white;}
+  .btn-primary:hover{background:#d6386c;}
+  .btn-ghost{background:transparent; color:white; border:1px solid rgba(255,255,255,0.3);}
+  .btn-ghost:hover{border-color:rgba(255,255,255,0.7);}
+  .geo-strip{
+    display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#9db4ff;
+  }
+
+  .pulse-visual{position:relative;}
+  .pulse-card{
+    background: linear-gradient(160deg, var(--azul) 0%, #142242 55%, var(--tinta) 100%);
+    border-radius:24px; padding:36px; position:relative; overflow:hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+  .pulse-card svg{width:100%; height:auto; display:block;}
+  .pulse-card .stat-row{display:flex; justify-content:space-between; margin-top:22px; padding-top:22px; border-top:1px solid rgba(255,255,255,0.12);}
+  .pulse-card .stat b{font-family:'Space Grotesk'; font-size:26px; display:block; color:white;}
+  .pulse-card .stat span{font-family:'IBM Plex Mono'; font-size:11px; color:#9db4ff; letter-spacing:.06em;}
+
+  /* SECTIONS */
+  section{padding:80px 0;}
+  .section-head{max-width:640px; margin-bottom:44px;}
+  .section-head .eyebrow{color: var(--rosa); margin-bottom:12px;}
+  .section-head h2{font-size:clamp(28px,3.6vw,38px);}
+
+  /* PARA QUEM É */
+  .goals-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  @media (max-width:820px){ .goals-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .goals-grid{grid-template-columns:1fr;} }
+  .goal-card{
+    background:white; border:1px solid var(--linha); border-radius:18px; padding:26px;
+  }
+  .goal-card .dot{width:38px; height:38px; border-radius:50%; background: linear-gradient(135deg, var(--azul-vivo), var(--rosa)); margin-bottom:16px;}
+  .goal-card h3{font-size:18px; margin-bottom:8px;}
+  .goal-card p{font-size:14px; color:#5b5f70; line-height:1.55;}
+
+  /* COMO FUNCIONA */
+  .steps{counter-reset: step;}
+  .step{display:flex; gap:24px; padding:28px 0; border-bottom:1px solid var(--linha);}
+  .step:last-child{border-bottom:none;}
+  .step-num{
+    counter-increment: step; font-family:'Space Grotesk'; font-weight:700; font-size:36px; color: var(--rosa-suave);
+    -webkit-text-stroke: 1.5px var(--rosa); width:70px; flex-shrink:0;
+  }
+  .step-num::before{content: counter(step, decimal-leading-zero);}
+  .step h3{font-size:20px; margin-bottom:6px;}
+  .step p{color:#5b5f70; font-size:15px; max-width:560px; line-height:1.6;}
+
+  /* DEPOIMENTOS */
+  .testi-section{background: var(--azul); color:white;}
+  .testi-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  @media (max-width:760px){ .testi-grid{grid-template-columns:1fr;} }
+  .testi-card{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:30px;}
+  .testi-card p.quote{font-family:'Space Grotesk'; font-size:20px; line-height:1.5; margin-bottom:20px;}
+  .testi-who{display:flex; align-items:center; gap:12px;}
+  .testi-avatar{width:40px; height:40px; border-radius:50%; background: linear-gradient(135deg, var(--rosa), var(--azul-vivo)); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700;}
+  .testi-who .name{font-weight:600; font-size:14px;}
+  .testi-who .meta{font-size:12px; color:#b7c1e0; font-family:'IBM Plex Mono';}
+  .testi-note{font-size:12px; color:#8ea0d4; margin-top:28px; font-family:'IBM Plex Mono';}
+
+  /* FORMULÁRIO */
+  .form-section{background:white;}
+  .form-card{
+    background: var(--papel); border:1px solid var(--linha); border-radius:24px; padding:44px;
+    display:grid; grid-template-columns: 0.9fr 1.1fr; gap:40px;
+  }
+  @media (max-width:820px){ .form-card{grid-template-columns:1fr; padding:28px;} }
+  .form-side h3{font-size:26px; margin-bottom:14px;}
+  .form-side p{color:#5b5f70; font-size:15px; line-height:1.6; margin-bottom:22px;}
+  .form-side ul{list-style:none; display:flex; flex-direction:column; gap:12px;}
+  .form-side li{display:flex; gap:10px; font-size:14px; color: var(--tinta); align-items:flex-start;}
+  .form-side li::before{content:"✓"; color:var(--rosa); font-weight:700;}
+
+  form{display:flex; flex-direction:column; gap:16px;}
+  .field label{display:block; font-size:13px; font-weight:600; margin-bottom:6px;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:13px 14px; border-radius:10px; border:1px solid var(--linha);
+    font-family:'Inter'; font-size:15px; background:white; color:var(--tinta);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{border-color: var(--azul-vivo);}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media (max-width:520px){ .field-row{grid-template-columns:1fr;} }
+  .submit-btn{
+    background: var(--tinta); color:white; padding:16px; border:none; border-radius:12px;
+    font-family:'Space Grotesk'; font-weight:700; font-size:16px; cursor:pointer; margin-top:6px;
+  }
+  .submit-btn:hover{background: var(--azul);}
+  .form-fineprint{font-size:12px; color:#8a8d99; margin-top:4px;}
+
+  /* INSTAGRAM */
+  .insta-section{}
+  .insta-head{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; margin-bottom:32px; flex-wrap:wrap;}
+  .insta-cta{
+    display:inline-flex; align-items:center; gap:8px; background: linear-gradient(135deg, var(--azul-vivo), var(--rosa));
+    color:white; padding:12px 22px; border-radius:30px; text-decoration:none; font-weight:600; font-size:14px;
+  }
+  .insta-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media (max-width:760px){ .insta-grid{grid-template-columns:repeat(2,1fr);} }
+  .insta-grid img{border-radius:14px; aspect-ratio:1/1; object-fit:cover; border:1px solid var(--linha);}
+
+  /* LOCALIZAÇÃO */
+  .local-section{background: var(--tinta); color:white;}
+  .local-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;}
+  @media (max-width:820px){ .local-grid{grid-template-columns:1fr;} }
+  .local-list{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;}
+  .local-tag{
+    font-family:'IBM Plex Mono'; font-size:13px; padding:8px 14px; border-radius:20px;
+    border:1px solid rgba(255,255,255,0.2); color:#c9cbd8;
+  }
+  .map-frame{border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.15);}
+  .map-frame iframe{width:100%; height:320px; border:0; display:block;}
+
+  /* FOOTER */
+  footer{background: var(--papel); border-top:1px solid var(--linha); padding:50px 0 30px;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:32px; margin-bottom:36px;}
+  @media (max-width:720px){ .footer-grid{grid-template-columns:1fr; gap:28px;} }
+  .footer-brand{display:flex; align-items:center; gap:10px; font-family:'Space Grotesk'; font-weight:700; margin-bottom:12px;}
+  .footer-brand img{width:28px; height:28px;}
+  footer p{color:#6b6e7a; font-size:14px; line-height:1.6;}
+  footer h4{font-family:'IBM Plex Mono'; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#8a8d99; margin-bottom:14px;}
+  footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
+  footer a{text-decoration:none; font-size:14px; color:#3a3d4a;}
+  footer a:hover{color:var(--rosa);}
+  .footer-bottom{
+    border-top:1px solid var(--linha); padding-top:24px; display:flex; justify-content:space-between;
+    flex-wrap:wrap; gap:10px; font-size:13px; color:#8a8d99;
+  }
+  .footer-bottom a{color:#8a8d99; text-decoration:underline;}
+  .footer-bottom a:hover{color:var(--rosa);}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><img src="assets/logo_icone_transparente.png" alt=""> Juliana Camargo</div>
+    <nav class="nav-links">
+      <a href="#para-quem">Para quem é</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="nav-cta" href="#contato">Avaliação gratuita</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-bg" width="100%" height="100%" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="1050" cy="120" r="320" fill="#3E6FD9" opacity="0.16"/>
+    <circle cx="120" cy="650" r="260" fill="#E8437A" opacity="0.14"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Personal trainer · Cotia-SP</p>
+        <h1>Treino pensado para o <span class="accent">corpo, a rotina e os objetivos</span> de cada mulher.</h1>
+        <p class="lead">Acompanhamento presencial em Cotia e região, com plano 100% individual, ajustado semana a semana com você — não um treino genérico de internet.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contato">Quero minha avaliação gratuita</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/personaljulianacamargo" target="_blank" rel="noopener">Ver no Instagram</a>
+        </div>
+        <div class="geo-strip">📍 Atendimento presencial em Cotia, Granja Viana e Zona Oeste de SP</div>
+      </div>
+
+      <div class="pulse-visual">
+        <div class="pulse-card">
+          <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="jg2" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#3E6FD9"/>
+                <stop offset="1" stop-color="#E8437A"/>
+              </linearGradient>
+            </defs>
+            <path id="pulseline" d="M0 110 L110 110 L135 40 L170 170 L205 90 L230 110 L400 110"
+                  stroke="url(#jg2)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="stat-row">
+            <div class="stat"><b>+120</b><span>ALUNAS ATENDIDAS</span></div>
+            <div class="stat"><b>100%</b><span>PLANO INDIVIDUAL</span></div>
+            <div class="stat"><b>Cotia</b><span>ATENDIMENTO LOCAL</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section id="para-quem">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Para quem é</p>
+      <h2>Um treino que se adapta a você — não o contrário</h2>
+    </div>
+    <div class="goals-grid">
+      <div class="goal-card"><div class="dot"></div><h3>Emagrecimento saudável</h3><p>Estratégia de treino alinhada à sua rotina real, sem promessas milagrosas.</p></div>
+      <div class="goal-card"><div class="dot"></div><h3>Força e disposição</h3><p>Ganho de força funcional para o dia a dia, com progressão de carga acompanhada de perto.</p></div>
+      <div class="goal-card"><div class="dot"></div><h3>Autoestima e postura</h3><p>Trabalho de corpo inteiro que melhora postura, energia e confiança.</p></div>
+      <div class="goal-card"><div class="dot"></div><h3>Retorno ao treino</h3><p>Voltar a treinar depois de uma pausa, no seu ritmo, com progressão segura.</p></div>
+      <div class="goal-card"><div class="dot"></div><h3>Terceira idade</h3><p>Treino de força e mobilidade adaptado, priorizando segurança e autonomia.</p></div>
+      <div class="goal-card"><div class="dot"></div><h3>Gestantes e pós-parto</h3><p>Acompanhamento com liberação médica, respeitando cada fase do corpo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona" style="background:white;">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Como funciona</p>
+      <h2>Do primeiro contato ao seu plano de treino</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num"></div>
+        <div><h3>Conversa inicial</h3><p>Entendo seu objetivo, sua rotina, histórico de treino e qualquer restrição de saúde.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div><h3>Avaliação física e plano personalizado</h3><p>Monto um plano de treino individual com base na sua avaliação — nada copiado ou genérico.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div><h3>Treino presencial e acompanhamento semanal</h3><p>Sessões presenciais em Cotia e região, com ajustes de carga e progresso revisados toda semana.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testi-section" id="depoimentos">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:#9db4ff;">Depoimentos</p>
+      <h2 style="color:white;">Quem já treina sabe a diferença</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">"Nunca tinha conseguido manter uma rotina de treino até treinar com acompanhamento perto."</p>
+        <div class="testi-who">
+          <div class="testi-avatar">R.</div>
+          <div><div class="name">Renata</div><div class="meta">6 meses de acompanhamento</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"O plano mudou toda semana conforme minha evolução. Isso fez toda a diferença pra mim."</p>
+        <div class="testi-who">
+          <div class="testi-avatar">M.</div>
+          <div><div class="name">Marina</div><div class="meta">4 meses de acompanhamento</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="testi-note">* Depoimentos ilustrativos — substituir por avaliações reais das alunas antes de publicar.</p>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section class="form-section" id="contato">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Contato</p>
+      <h2>Vamos montar seu plano de treino?</h2>
+    </div>
+    <div class="form-card">
+      <div class="form-side">
+        <h3>Conte um pouco antes de conversarmos</h3>
+        <p>Preencha o formulário e eu já recebo suas informações direto no WhatsApp — sem enrolação, sem robô.</p>
+        <ul>
+          <li>Resposta em até 24h úteis</li>
+          <li>Avaliação inicial sem custo</li>
+          <li>Atendimento presencial em Cotia e região</li>
+        </ul>
+      </div>
+
+      <form id="leadForm">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+        </div>
+        <div class="field">
+          <label for="objetivo">Principal objetivo</label>
+          <select id="objetivo" name="objetivo" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Emagrecimento saudável">Emagrecimento saudável</option>
+            <option value="Força e disposição">Força e disposição</option>
+            <option value="Autoestima e postura">Autoestima e postura</option>
+            <option value="Retorno ao treino">Retorno ao treino</option>
+            <option value="Terceira idade">Terceira idade</option>
+            <option value="Gestante / pós-parto">Gestante / pós-parto</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="disponibilidade">Disponibilidade de horário</label>
+          <select id="disponibilidade" name="disponibilidade" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+            <option value="Flexível">Flexível</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte algo a mais, se quiser"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar pelo WhatsApp</button>
+        <p class="form-fineprint">Ao enviar, você será redirecionada ao WhatsApp com sua mensagem pronta. Seus dados não são armazenados neste site — veja a <a href="privacidade.html" style="color:var(--azul-vivo);">Política de Privacidade</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="insta-section" style="background:white;">
+  <div class="wrap">
+    <div class="insta-head">
+      <div class="section-head" style="margin-bottom:0;">
+        <p class="eyebrow">Instagram</p>
+        <h2>Treinos, bastidores e dicas toda semana</h2>
+      </div>
+      <a class="insta-cta" href="https://www.instagram.com/personaljulianacamargo" target="_blank" rel="noopener">@personaljulianacamargo →</a>
+    </div>
+    <div class="insta-grid">
+      <img src="assets/social-01.png" alt="Post do Instagram de Juliana Camargo Personal Trainer">
+      <img src="assets/social-02.png" alt="Dica de treino no Instagram de Juliana Camargo">
+      <img src="assets/social-03.png" alt="Depoimento de aluna no Instagram de Juliana Camargo">
+      <img src="assets/social-04.png" alt="Resultado de acompanhamento no Instagram de Juliana Camargo">
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="local-section">
+  <div class="wrap">
+    <div class="local-grid">
+      <div>
+        <p class="eyebrow" style="color:#9db4ff;">Área de atendimento</p>
+        <h2 style="color:white; margin-bottom:14px;">Presencial em Cotia e região</h2>
+        <p style="color:#c9cbd8; line-height:1.6;">Atendimento personalizado, sem deslocamento até academias distantes ou treinos em grupo genéricos.</p>
+        <div class="local-list">
+          <span class="local-tag">Cotia</span>
+          <span class="local-tag">Granja Viana</span>
+          <span class="local-tag">Itapevi</span>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Cotia,SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da área de atendimento em Cotia-SP"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/logo_icone_transparente.png" alt=""> Juliana Camargo</div>
+        <p>Personal trainer para mulheres, com atendimento presencial em Cotia-SP e região. Treino individual, acompanhamento real.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#para-quem">Para quem é</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/personaljulianacamargo" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://wa.me/5511974966203" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+          <li><a href="termos.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Juliana Camargo Personal Trainer — Cotia, SP</span>
+      <span>Criado por <a href="https://diogozura.com" target="_blank" rel="noopener">diogozura.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Envio do formulário -> monta mensagem e redireciona pro WhatsApp
+  const WHATSAPP_NUMBER = "5511974966203";
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const objetivo = document.getElementById('objetivo').value;
+    const disponibilidade = document.getElementById('disponibilidade').value;
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    let texto = `Olá, Juliana! Meu nome é ${nome}.\n`;
+    texto += `${objetivo}.\n`;
+    texto += `Disponibilidade: ${disponibilidade}.\n`;
+    if(mensagem){ texto += `${mensagem}`; }
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
