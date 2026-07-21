@@ -256,11 +256,14 @@
   .insta-banner-bg{position:absolute; inset:0; z-index:-1;}
   .insta-banner-icon{width:44px; height:44px; flex-shrink:0;}
   .insta-banner-text{flex:1; min-width:0;}
-  .insta-banner-text h3{font-family:'Space Grotesk'; color:white; font-size:20px; margin-bottom:6px;}
-  .insta-banner-text p{color:rgba(255,255,255,0.85); font-size:14px; line-height:1.5; margin:0;}
+  .insta-banner-text h3{font-family:'Space Grotesk'; color:white; font-size:20px; margin-bottom:6px; overflow-wrap:break-word;}
+  .insta-banner-text p{color:rgba(255,255,255,0.85); font-size:14px; line-height:1.5; margin:0; overflow-wrap:break-word;}
   .insta-banner-arrow{color:white; font-size:26px; flex-shrink:0; transition:transform .2s;}
   .insta-banner:hover .insta-banner-arrow{transform:translateX(6px);}
-  @media (max-width:600px){ .insta-banner{flex-wrap:wrap; padding:28px;} .insta-banner-arrow{display:none;} }
+  @media (max-width:600px){
+    .insta-banner{flex-direction:column; align-items:flex-start; gap:16px; padding:28px;}
+    .insta-banner-arrow{display:none;}
+  }
 
   /* LOCALIZAÇÃO */
   .local-section{background: var(--tinta); color:white;}
