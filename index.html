@@ -102,8 +102,6 @@
   .hero-bg circle{transform-box: fill-box; transform-origin:center; animation: float 9s ease-in-out infinite;}
   .hero-bg circle:nth-child(2){animation-delay: -4s;}
   #pulseline{stroke-dasharray:700; stroke-dashoffset:700; animation: drawLine 1.6s ease forwards .5s;}
-  .insta-banner-bg circle{transform-box: fill-box; transform-origin:center; animation: float 10s ease-in-out infinite;}
-  .insta-banner-bg circle:nth-child(2){animation-delay:-5s;}
 
   /* NAV */
   header.nav{
@@ -287,6 +285,7 @@
   .footer-bottom a{color:#8a8d99; text-decoration:underline;}
   .footer-bottom a:hover{color:var(--rosa);}
 </style>
+<noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
 </head>
 <body>
 
@@ -545,19 +544,27 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // Animações de entrada ao rolar a página
-  const revealEls = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(el => revealObserver.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('is-visible'));
+  try {
+    const revealEls = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => revealObserver.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+    // Rede de segurança: garante que o conteúdo apareça mesmo se algo impedir a animação
+    window.setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => el.classList.add('is-visible'));
+    }, 2000);
+  } catch(err){
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
   }
 
   // Envio do formulário -> monta mensagem e redireciona pro WhatsApp
