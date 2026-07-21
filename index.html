@@ -89,6 +89,22 @@
   :focus-visible{outline:3px solid var(--azul-vivo); outline-offset:3px;}
   @media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
 
+  /* SCROLL REVEAL */
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; transition-delay: calc(var(--d, 0) * 90ms);}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+
+  /* HERO ENTRANCE */
+  @keyframes fadeUp{from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:translateY(0);}}
+  @keyframes drawLine{to{stroke-dashoffset:0;}}
+  @keyframes float{0%,100%{transform:translateY(0);} 50%{transform:translateY(-16px);}}
+  .hero-grid > div:first-child{animation: fadeUp .8s ease both;}
+  .pulse-visual{animation: fadeUp .8s ease .15s both;}
+  .hero-bg circle{transform-box: fill-box; transform-origin:center; animation: float 9s ease-in-out infinite;}
+  .hero-bg circle:nth-child(2){animation-delay: -4s;}
+  #pulseline{stroke-dasharray:700; stroke-dashoffset:700; animation: drawLine 1.6s ease forwards .5s;}
+  .insta-banner-bg circle{transform-box: fill-box; transform-origin:center; animation: float 10s ease-in-out infinite;}
+  .insta-banner-bg circle:nth-child(2){animation-delay:-5s;}
+
   /* NAV */
   header.nav{
     position:sticky; top:0; z-index:50;
@@ -104,7 +120,9 @@
   .nav-cta{
     background: var(--tinta); color:white; padding:10px 20px; border-radius:30px;
     font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;
+    transition: transform .2s ease;
   }
+  .nav-cta:hover{transform:translateY(-2px);}
   @media (max-width:720px){ .nav-links{display:none;} }
 
   /* HERO */
@@ -127,7 +145,9 @@
   .btn{
     display:inline-flex; align-items:center; gap:8px; padding:15px 26px; border-radius:32px;
     font-weight:600; font-size:15px; text-decoration:none; border:none; cursor:pointer; font-family:'Inter';
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
   }
+  .btn:hover{transform:translateY(-3px);}
   .btn-primary{background: var(--rosa); color:white;}
   .btn-primary:hover{background:#d6386c;}
   .btn-ghost{background:transparent; color:white; border:1px solid rgba(255,255,255,0.3);}
@@ -159,34 +179,27 @@
   @media (max-width:560px){ .goals-grid{grid-template-columns:1fr;} }
   .goal-card{
     background:white; border:1px solid var(--linha); border-radius:18px; padding:26px;
+    transition: transform .25s ease, box-shadow .25s ease;
   }
-  .goal-card .dot{width:38px; height:38px; border-radius:50%; background: linear-gradient(135deg, var(--azul-vivo), var(--rosa)); margin-bottom:16px;}
+  .goal-card:hover{transform:translateY(-6px); box-shadow:0 16px 32px rgba(16,19,28,0.08);}
+  .goal-card .dot{width:38px; height:38px; border-radius:50%; background: linear-gradient(135deg, var(--azul-vivo), var(--rosa)); margin-bottom:16px; transition: transform .25s ease;}
+  .goal-card:hover .dot{transform:scale(1.12);}
   .goal-card h3{font-size:18px; margin-bottom:8px;}
   .goal-card p{font-size:14px; color:#5b5f70; line-height:1.55;}
 
   /* COMO FUNCIONA */
   .steps{counter-reset: step;}
-  .step{display:flex; gap:24px; padding:28px 0; border-bottom:1px solid var(--linha);}
+  .step{display:flex; gap:24px; padding:28px 0; border-bottom:1px solid var(--linha); transition: transform .25s ease;}
   .step:last-child{border-bottom:none;}
+  .step:hover{transform:translateX(6px);}
   .step-num{
     counter-increment: step; font-family:'Space Grotesk'; font-weight:700; font-size:36px; color: var(--rosa-suave);
-    -webkit-text-stroke: 1.5px var(--rosa); width:70px; flex-shrink:0;
+    -webkit-text-stroke: 1.5px var(--rosa); width:70px; flex-shrink:0; transition: color .25s ease;
   }
+  .step:hover .step-num{color: var(--rosa);}
   .step-num::before{content: counter(step, decimal-leading-zero);}
   .step h3{font-size:20px; margin-bottom:6px;}
   .step p{color:#5b5f70; font-size:15px; max-width:560px; line-height:1.6;}
-
-  /* DEPOIMENTOS */
-  .testi-section{background: var(--azul); color:white;}
-  .testi-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
-  @media (max-width:760px){ .testi-grid{grid-template-columns:1fr;} }
-  .testi-card{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:30px;}
-  .testi-card p.quote{font-family:'Space Grotesk'; font-size:20px; line-height:1.5; margin-bottom:20px;}
-  .testi-who{display:flex; align-items:center; gap:12px;}
-  .testi-avatar{width:40px; height:40px; border-radius:50%; background: linear-gradient(135deg, var(--rosa), var(--azul-vivo)); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700;}
-  .testi-who .name{font-weight:600; font-size:14px;}
-  .testi-who .meta{font-size:12px; color:#b7c1e0; font-family:'IBM Plex Mono';}
-  .testi-note{font-size:12px; color:#8ea0d4; margin-top:28px; font-family:'IBM Plex Mono';}
 
   /* FORMULÁRIO */
   .form-section{background:white;}
@@ -224,9 +237,21 @@
     display:inline-flex; align-items:center; gap:8px; background: linear-gradient(135deg, var(--azul-vivo), var(--rosa));
     color:white; padding:12px 22px; border-radius:30px; text-decoration:none; font-weight:600; font-size:14px;
   }
-  .insta-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
-  @media (max-width:760px){ .insta-grid{grid-template-columns:repeat(2,1fr);} }
-  .insta-grid img{border-radius:14px; aspect-ratio:1/1; object-fit:cover; border:1px solid var(--linha);}
+  .insta-banner{
+    position:relative; overflow:hidden; display:flex; align-items:center; gap:24px;
+    background: linear-gradient(135deg, var(--azul-vivo), var(--rosa));
+    border-radius:20px; padding:36px 40px; text-decoration:none; isolation:isolate;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .insta-banner:hover{transform:translateY(-5px); box-shadow:0 20px 40px rgba(62,111,217,0.28);}
+  .insta-banner-bg{position:absolute; inset:0; z-index:-1;}
+  .insta-banner-icon{width:44px; height:44px; flex-shrink:0;}
+  .insta-banner-text{flex:1; min-width:0;}
+  .insta-banner-text h3{font-family:'Space Grotesk'; color:white; font-size:20px; margin-bottom:6px;}
+  .insta-banner-text p{color:rgba(255,255,255,0.85); font-size:14px; line-height:1.5; margin:0;}
+  .insta-banner-arrow{color:white; font-size:26px; flex-shrink:0; transition:transform .2s;}
+  .insta-banner:hover .insta-banner-arrow{transform:translateX(6px);}
+  @media (max-width:600px){ .insta-banner{flex-wrap:wrap; padding:28px;} .insta-banner-arrow{display:none;} }
 
   /* LOCALIZAÇÃO */
   .local-section{background: var(--tinta); color:white;}
@@ -267,7 +292,6 @@
     <nav class="nav-links">
       <a href="#para-quem">Para quem é</a>
       <a href="#como-funciona">Como funciona</a>
-      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </nav>
     <a class="nav-cta" href="#contato">Avaliação gratuita</a>
@@ -306,7 +330,6 @@
                   stroke="url(#jg2)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <div class="stat-row">
-            <div class="stat"><b>+120</b><span>ALUNAS ATENDIDAS</span></div>
             <div class="stat"><b>100%</b><span>PLANO INDIVIDUAL</span></div>
             <div class="stat"><b>Cotia</b><span>ATENDIMENTO LOCAL</span></div>
           </div>
@@ -319,17 +342,17 @@
 <!-- PARA QUEM É -->
 <section id="para-quem">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="eyebrow">Para quem é</p>
       <h2>Um treino que se adapta a você — não o contrário</h2>
     </div>
     <div class="goals-grid">
-      <div class="goal-card"><div class="dot"></div><h3>Emagrecimento saudável</h3><p>Estratégia de treino alinhada à sua rotina real, sem promessas milagrosas.</p></div>
-      <div class="goal-card"><div class="dot"></div><h3>Força e disposição</h3><p>Ganho de força funcional para o dia a dia, com progressão de carga acompanhada de perto.</p></div>
-      <div class="goal-card"><div class="dot"></div><h3>Autoestima e postura</h3><p>Trabalho de corpo inteiro que melhora postura, energia e confiança.</p></div>
-      <div class="goal-card"><div class="dot"></div><h3>Retorno ao treino</h3><p>Voltar a treinar depois de uma pausa, no seu ritmo, com progressão segura.</p></div>
-      <div class="goal-card"><div class="dot"></div><h3>Terceira idade</h3><p>Treino de força e mobilidade adaptado, priorizando segurança e autonomia.</p></div>
-      <div class="goal-card"><div class="dot"></div><h3>Gestantes e pós-parto</h3><p>Acompanhamento com liberação médica, respeitando cada fase do corpo.</p></div>
+      <div class="goal-card reveal" style="--d:0"><div class="dot"></div><h3>Emagrecimento saudável</h3><p>Estratégia de treino alinhada à sua rotina real, sem promessas milagrosas.</p></div>
+      <div class="goal-card reveal" style="--d:1"><div class="dot"></div><h3>Força e disposição</h3><p>Ganho de força funcional para o dia a dia, com progressão de carga acompanhada de perto.</p></div>
+      <div class="goal-card reveal" style="--d:2"><div class="dot"></div><h3>Autoestima e postura</h3><p>Trabalho de corpo inteiro que melhora postura, energia e confiança.</p></div>
+      <div class="goal-card reveal" style="--d:0"><div class="dot"></div><h3>Retorno ao treino</h3><p>Voltar a treinar depois de uma pausa, no seu ritmo, com progressão segura.</p></div>
+      <div class="goal-card reveal" style="--d:1"><div class="dot"></div><h3>Terceira idade</h3><p>Treino de força e mobilidade adaptado, priorizando segurança e autonomia.</p></div>
+      <div class="goal-card reveal" style="--d:2"><div class="dot"></div><h3>Gestantes e pós-parto</h3><p>Acompanhamento com liberação médica, respeitando cada fase do corpo.</p></div>
     </div>
   </div>
 </section>
@@ -337,20 +360,20 @@
 <!-- COMO FUNCIONA -->
 <section id="como-funciona" style="background:white;">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="eyebrow">Como funciona</p>
       <h2>Do primeiro contato ao seu plano de treino</h2>
     </div>
     <div class="steps">
-      <div class="step">
+      <div class="step reveal" style="--d:0">
         <div class="step-num"></div>
         <div><h3>Conversa inicial</h3><p>Entendo seu objetivo, sua rotina, histórico de treino e qualquer restrição de saúde.</p></div>
       </div>
-      <div class="step">
+      <div class="step reveal" style="--d:1">
         <div class="step-num"></div>
         <div><h3>Avaliação física e plano personalizado</h3><p>Monto um plano de treino individual com base na sua avaliação — nada copiado ou genérico.</p></div>
       </div>
-      <div class="step">
+      <div class="step reveal" style="--d:2">
         <div class="step-num"></div>
         <div><h3>Treino presencial e acompanhamento semanal</h3><p>Sessões presenciais em Cotia e região, com ajustes de carga e progresso revisados toda semana.</p></div>
       </div>
@@ -358,41 +381,14 @@
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
-<section class="testi-section" id="depoimentos">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow" style="color:#9db4ff;">Depoimentos</p>
-      <h2 style="color:white;">Quem já treina sabe a diferença</h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <p class="quote">"Nunca tinha conseguido manter uma rotina de treino até treinar com acompanhamento perto."</p>
-        <div class="testi-who">
-          <div class="testi-avatar">R.</div>
-          <div><div class="name">Renata</div><div class="meta">6 meses de acompanhamento</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <p class="quote">"O plano mudou toda semana conforme minha evolução. Isso fez toda a diferença pra mim."</p>
-        <div class="testi-who">
-          <div class="testi-avatar">M.</div>
-          <div><div class="name">Marina</div><div class="meta">4 meses de acompanhamento</div></div>
-        </div>
-      </div>
-    </div>
-    <p class="testi-note">* Depoimentos ilustrativos — substituir por avaliações reais das alunas antes de publicar.</p>
-  </div>
-</section>
-
 <!-- FORMULÁRIO -->
 <section class="form-section" id="contato">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="eyebrow">Contato</p>
       <h2>Vamos montar seu plano de treino?</h2>
     </div>
-    <div class="form-card">
+    <div class="form-card reveal">
       <div class="form-side">
         <h3>Conte um pouco antes de conversarmos</h3>
         <p>Preencha o formulário e eu já recebo suas informações direto no WhatsApp — sem enrolação, sem robô.</p>
@@ -446,18 +442,27 @@
 <section class="insta-section" style="background:white;">
   <div class="wrap">
     <div class="insta-head">
-      <div class="section-head" style="margin-bottom:0;">
+      <div class="section-head reveal" style="margin-bottom:0;">
         <p class="eyebrow">Instagram</p>
         <h2>Treinos, bastidores e dicas toda semana</h2>
       </div>
-      <a class="insta-cta" href="https://www.instagram.com/personaljulianacamargo" target="_blank" rel="noopener">@personaljulianacamargo →</a>
     </div>
-    <div class="insta-grid">
-      <img src="assets/social-01.png" alt="Post do Instagram de Juliana Camargo Personal Trainer">
-      <img src="assets/social-02.png" alt="Dica de treino no Instagram de Juliana Camargo">
-      <img src="assets/social-03.png" alt="Depoimento de aluna no Instagram de Juliana Camargo">
-      <img src="assets/social-04.png" alt="Resultado de acompanhamento no Instagram de Juliana Camargo">
-    </div>
+    <a class="insta-banner reveal" href="https://www.instagram.com/personaljulianacamargo" target="_blank" rel="noopener">
+      <svg class="insta-banner-bg" width="100%" height="100%" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="1080" cy="40" r="220" fill="white" opacity="0.08"/>
+        <circle cx="80" cy="280" r="160" fill="white" opacity="0.08"/>
+      </svg>
+      <svg class="insta-banner-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="6" stroke="white" stroke-width="1.6"/>
+        <circle cx="12" cy="12" r="4.6" stroke="white" stroke-width="1.6"/>
+        <circle cx="17.4" cy="6.6" r="1.1" fill="white"/>
+      </svg>
+      <div class="insta-banner-text">
+        <h3>@personaljulianacamargo</h3>
+        <p>Treinos, bastidores e dicas novas toda semana — clique e acompanhe no Instagram.</p>
+      </div>
+      <span class="insta-banner-arrow">→</span>
+    </a>
   </div>
 </section>
 
@@ -465,7 +470,7 @@
 <section class="local-section">
   <div class="wrap">
     <div class="local-grid">
-      <div>
+      <div class="reveal" style="--d:0">
         <p class="eyebrow" style="color:#9db4ff;">Área de atendimento</p>
         <h2 style="color:white; margin-bottom:14px;">Presencial em Cotia e região</h2>
         <p style="color:#c9cbd8; line-height:1.6;">Atendimento personalizado, sem deslocamento até academias distantes ou treinos em grupo genéricos.</p>
@@ -475,7 +480,7 @@
           <span class="local-tag">Itapevi</span>
         </div>
       </div>
-      <div class="map-frame">
+      <div class="map-frame reveal" style="--d:1">
         <iframe src="https://www.google.com/maps?q=Cotia,SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da área de atendimento em Cotia-SP"></iframe>
       </div>
     </div>
@@ -494,7 +499,6 @@
         <ul>
           <li><a href="#para-quem">Para quem é</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
@@ -517,6 +521,22 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Animações de entrada ao rolar a página
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
 
   // Envio do formulário -> monta mensagem e redireciona pro WhatsApp
   const WHATSAPP_NUMBER = "5511974966203";
