@@ -58,7 +58,7 @@
     "latitude": -23.6039,
     "longitude": -46.9187
   },
-  "areaServed": ["Cotia", "Granja Viana", "Vargem Grande Paulista", "Itapevi", "Zona Oeste de São Paulo"],
+  "areaServed": ["Cotia", "Granja Viana", "Itapevi", "Zona Oeste de São Paulo"],
   "sameAs": ["https://www.instagram.com/personaljulianacamargo"]
 }
 </script>
@@ -101,7 +101,10 @@
   .pulse-visual{animation: fadeUp .8s ease .15s both;}
   .hero-bg circle{transform-box: fill-box; transform-origin:center; animation: float 9s ease-in-out infinite;}
   .hero-bg circle:nth-child(2){animation-delay: -4s;}
-  #pulseline{stroke-dasharray:700; stroke-dashoffset:700; animation: drawLine 1.6s ease forwards .5s;}
+  #pulseline{stroke-dasharray:700; stroke-dashoffset:0;}
+  @media (prefers-reduced-motion: no-preference){
+    #pulseline{stroke-dashoffset:700; animation: drawLine 1.6s ease forwards .5s;}
+  }
 
   /* NAV */
   header.nav{
