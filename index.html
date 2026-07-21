@@ -182,8 +182,12 @@
     transition: transform .25s ease, box-shadow .25s ease;
   }
   .goal-card:hover{transform:translateY(-6px); box-shadow:0 16px 32px rgba(16,19,28,0.08);}
-  .goal-card .dot{width:38px; height:38px; border-radius:50%; background: linear-gradient(135deg, var(--azul-vivo), var(--rosa)); margin-bottom:16px; transition: transform .25s ease;}
+  .goal-card .dot{
+    width:44px; height:44px; border-radius:50%; background: linear-gradient(135deg, var(--azul-vivo), var(--rosa));
+    margin-bottom:16px; transition: transform .25s ease; display:flex; align-items:center; justify-content:center;
+  }
   .goal-card:hover .dot{transform:scale(1.12);}
+  .goal-card .dot svg{width:20px; height:20px;}
   .goal-card h3{font-size:18px; margin-bottom:8px;}
   .goal-card p{font-size:14px; color:#5b5f70; line-height:1.55;}
 
@@ -347,12 +351,30 @@
       <h2>Um treino que se adapta a você — não o contrário</h2>
     </div>
     <div class="goals-grid">
-      <div class="goal-card reveal" style="--d:0"><div class="dot"></div><h3>Emagrecimento saudável</h3><p>Estratégia de treino alinhada à sua rotina real, sem promessas milagrosas.</p></div>
-      <div class="goal-card reveal" style="--d:1"><div class="dot"></div><h3>Força e disposição</h3><p>Ganho de força funcional para o dia a dia, com progressão de carga acompanhada de perto.</p></div>
-      <div class="goal-card reveal" style="--d:2"><div class="dot"></div><h3>Autoestima e postura</h3><p>Trabalho de corpo inteiro que melhora postura, energia e confiança.</p></div>
-      <div class="goal-card reveal" style="--d:0"><div class="dot"></div><h3>Retorno ao treino</h3><p>Voltar a treinar depois de uma pausa, no seu ritmo, com progressão segura.</p></div>
-      <div class="goal-card reveal" style="--d:1"><div class="dot"></div><h3>Terceira idade</h3><p>Treino de força e mobilidade adaptado, priorizando segurança e autonomia.</p></div>
-      <div class="goal-card reveal" style="--d:2"><div class="dot"></div><h3>Gestantes e pós-parto</h3><p>Acompanhamento com liberação médica, respeitando cada fase do corpo.</p></div>
+      <div class="goal-card reveal" style="--d:0">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3C7 3 4 7 4 12c0 3 2 5 5 5 5 0 8-4 8-9 0-2-2-5-5-5Z"/><path d="M9 15 4.5 19.5"/></svg></div>
+        <h3>Emagrecimento saudável</h3><p>Estratégia de treino alinhada à sua rotina real, sem promessas milagrosas.</p>
+      </div>
+      <div class="goal-card reveal" style="--d:1">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="12" x2="16" y2="12"/><rect x="2.5" y="9" width="4" height="6" rx="1"/><rect x="17.5" y="9" width="4" height="6" rx="1"/></svg></div>
+        <h3>Força e disposição</h3><p>Ganho de força funcional para o dia a dia, com progressão de carga acompanhada de perto.</p>
+      </div>
+      <div class="goal-card reveal" style="--d:2">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg></div>
+        <h3>Autoestima e postura</h3><p>Trabalho de corpo inteiro que melhora postura, energia e confiança.</p>
+      </div>
+      <div class="goal-card reveal" style="--d:0">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3-6.2"/><path d="M20 3v4h-4"/></svg></div>
+        <h3>Retorno ao treino</h3><p>Voltar a treinar depois de uma pausa, no seu ritmo, com progressão segura.</p>
+      </div>
+      <div class="goal-card reveal" style="--d:1">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3Z"/></svg></div>
+        <h3>Terceira idade</h3><p>Treino de força e mobilidade adaptado, priorizando segurança e autonomia.</p>
+      </div>
+      <div class="goal-card reveal" style="--d:2">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-6-3.6-8-7.2C2.5 9.5 3.7 6.5 7 6.5c1.7 0 3 .9 3.5 2 .5-1.1 1.8-2 3.5-2 3.3 0 4.5 3 3 6.3-2 3.6-8 7.2-8 7.2Z"/><circle cx="12" cy="12" r="1.3" fill="white" stroke="none"/></svg></div>
+        <h3>Gestantes e pós-parto</h3><p>Acompanhamento com liberação médica, respeitando cada fase do corpo.</p>
+      </div>
     </div>
   </div>
 </section>
